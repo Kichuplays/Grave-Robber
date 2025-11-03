@@ -15,13 +15,13 @@ public class BasicZombie : Enemy
         }
         else
         {
-            Patrol();
+            Idle();
         }
     }
 
-    void Patrol()
+    void Idle()
     {
-        rb.AddForce(Vector2.up * patrolSpeed);
+        
     }
 
     void ChasePlayer()
