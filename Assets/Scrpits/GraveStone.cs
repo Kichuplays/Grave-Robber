@@ -1,19 +1,47 @@
+using System.Collections;
 using UnityEngine;
 
-public class EnemyTouchy : MonoBehaviour
+public class GraveStone : MonoBehaviour
 {
-    public int damage = 2; //Skada som spelaren ska ta när Enemy rör honom
+    [Header("Enemy Settings")]
+    public GameObject enemyPrefab;   // The enemy to spawn
+    public Transform spawnPoint;     // Optional spawn position (can be empty)
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public SpriteRenderer spriteRenderer;
+
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Shovel"))
-        {
-            //Shovel Graveston = collision.gameObject.GetComponent<Shovel>();
+        // Ensure collider acts as a trigger
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.isTrigger = true;
+    }
 
-            //if (Graveston != null)
-            {
-             //   player.TakeDamage(damage);
-            }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Only react to shovel
+        if (collision.CompareTag("Shovel"))
+        {
+            StartCoroutine(SpawnCoroutine());
+            if (spriteRenderer != null)
+                spriteRenderer.enabled = false;
         }
     }
+
+    private IEnumerator SpawnCoroutine()
+    {
+        // Optional delay so you can play animation/sound first
+        yield return new WaitForSeconds(0.5f);
+
+        // Spawn enemy
+        Vector3 spawnPos = (spawnPoint != null) ? spawnPoint.position : transform.position;
+        if (enemyPrefab != null)
+            Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        else
+            Debug.LogWarning("No enemyPrefab assigned!");
+
+        // Now destroy the gravestone (after spawn)
+        Destroy(gameObject);
+    }
 }
+

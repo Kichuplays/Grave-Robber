@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class WeaponFollow : MonoBehaviour
+public class Shovel : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speed;
