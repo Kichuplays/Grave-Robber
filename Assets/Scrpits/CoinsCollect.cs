@@ -16,10 +16,10 @@ public class CoinsCollect : MonoBehaviour
         Coins.text = coins.ToString() + "COINS";
     }
 
-   
+   // Lägg till pengar
     public void AddPoint()
     {
         coins += 1;
-        Coins.text = coins.ToString() + "Points";
+        Coins.text = coins.ToString() + "Coins";
     }
 }
