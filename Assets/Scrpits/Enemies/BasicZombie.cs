@@ -26,22 +26,24 @@ public class BasicZombie : Enemy
 
     void ChasePlayer()
     {
-        if (target.position.x > transform.position.x)
+        if(Vector2.Distance(transform.position,target.position) > targetDistance)
         {
-            rb.AddForce(Vector2.right * chaseSpeed);
-        }
+            print($"{gameObject.name} is chasing player");
+            if (target.position.x > transform.position.x)
+            {
+                rb.AddForce(Vector2.right * chaseSpeed);
+            }
 
-        if (target.position.x < transform.position.x)
-        {
-            rb.AddForce(Vector2.left * chaseSpeed);
-        }
+            if (target.position.x < transform.position.x)
+            {
+                rb.AddForce(Vector2.left * chaseSpeed);
+            }
 
-        if (needToClimb)
-        {
-            rb.AddForce(Vector2.up * climbForce);
+            if (needToClimb)
+            {
+                rb.AddForce(Vector2.up * climbForce);
+            }
         }
-
-        print($"{gameObject.name} is chasing player");
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

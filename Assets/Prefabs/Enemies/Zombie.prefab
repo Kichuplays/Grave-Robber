@@ -103,6 +103,7 @@ MonoBehaviour:
   patrolSpeed: 0
   target: {fileID: 0}
   isAttacking: 0
+  targetDistance: 0.5
   climbForce: 2
 --- !u!50 &4702369112117668509
 Rigidbody2D:
