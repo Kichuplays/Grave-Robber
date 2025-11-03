@@ -8,19 +8,8 @@ public class EnemyTest : Enemy
     {
         if (target != null)
         {
-            if (!tooManyAttackers)
-            {
-                ChasePlayer();
-                isAttacking = true;
-            }
-            else if (isAttacking)
-            {
-                ChasePlayer();
-            }
-            else
-            {
-                //HoverAraoundPlayer();
-            }
+            ChasePlayer();
+            isAttacking = true;
         }
         else
         {
