@@ -6,10 +6,14 @@ public class EnemyManager : MonoBehaviour
 {
     Enemy[] enemies;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject[] enemyObject = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = new Enemy[enemyObject.Length];
+        for (int i = 0; i < enemyObject.Length; i++)
+        {
+            enemies[i] = enemyObject[i].GetComponent<Enemy>();
+        }
     }
 
     // Update is called once per frame

@@ -10,7 +10,7 @@ public class EnemyTest : Enemy
         {
             if (!tooManyAttackers)
             {
-                //ChasePlayer();
+                ChasePlayer();
                 isAttacking = true;
             }
             else if (isAttacking)
@@ -35,8 +35,16 @@ public class EnemyTest : Enemy
 
     void ChasePlayer()
     {
-        rb.AddForce(Vector2.up * chaseSpeed);
+        if(target.position.x > transform.position.x)
+        {
+            rb.AddForce(Vector2.right * chaseSpeed);
+        }
+        
+        if(target.position.x < transform.position.x)
+        {
+            rb.AddForce(Vector2.left * chaseSpeed);
+        }
 
-        print($"{gameObject.name} chasing player");
+        print($"{gameObject.name} is chasing player");
     }
 }
