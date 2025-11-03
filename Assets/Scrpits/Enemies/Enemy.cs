@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
 
     [Header("Targeting")]
     public Transform target; //the thing they are going to attack
-    public bool tooManyAttackers; // false means it's ok to attack
     public bool isAttacking;
 
     protected Rigidbody2D rb;
@@ -25,19 +24,8 @@ public class Enemy : MonoBehaviour
     {
         if(target != null)
         {
-            if (!tooManyAttackers)
-            {
-                ChasePlayer();
-                isAttacking = true;
-            }
-            else if (isAttacking)
-            {
-                ChasePlayer();
-            }
-            else
-            {
-                HoverAraoundPlayer();
-            }
+            ChasePlayer();
+            isAttacking = true;
         }
         else
         {
@@ -46,11 +34,6 @@ public class Enemy : MonoBehaviour
     }
 
     void ChasePlayer()
-    {
-
-    }
-
-    void HoverAraoundPlayer()
     {
 
     }
