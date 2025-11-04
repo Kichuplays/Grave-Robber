@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class Shovel : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] float speed;
-
-    private GameObject player;
-
-    Vector2 moveDir;
     private void LookAtMouse()
     {
         Vector2 mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -21,8 +15,6 @@ public class Shovel : MonoBehaviour
     void FixedUpdate()
     {
         LookAtMouse(); // Aims at mouse
-        //moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
     }
 }
 
