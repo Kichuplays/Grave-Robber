@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 43f3194a6988aef4ba4311bdb7622304
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Low_Tier_Marco_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233e422f3e634ac4ea10f27972d837b1
+      internalID: -1107510632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_1
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d0ef75e45f37941ab51c166ce22b73
+      internalID: -1457928484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_2
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11c58d21588ac247939da923c9d9382
+      internalID: 757565455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_3
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac3891c51efde348bdf718ed835e5d6
+      internalID: 1937159676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_4
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab74caf06b896b41a888964ff4310fe
+      internalID: 1675803973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_5
+      rect:
+        serializedVersion: 2
+        x: 4690
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98cf96878b93864faa6a8c30744064e
+      internalID: -308973520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_6
+      rect:
+        serializedVersion: 2
+        x: 5628
+        y: 1406
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6178cb15edefebf4b9df168567872dec
+      internalID: 1170517609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4821fb038ce7042aca3912db6b9c6d
+      internalID: -2003000828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_8
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace92eeafb1c3d4c9f36ac557ad24aa
+      internalID: 1141929887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_9
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1ddaa94a464df4aa35893fdb78c244
+      internalID: -2106768646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_10
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cdbb67fac37504bb4a63aad6ed21a3
+      internalID: -2015854549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_11
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5f924591205b647bf606cc7595401f
+      internalID: 60628205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_12
+      rect:
+        serializedVersion: 2
+        x: 4690
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c4faefc713d2c4ea001b0e7fce1c10
+      internalID: 145509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_13
+      rect:
+        serializedVersion: 2
+        x: 5628
+        y: 703
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300ec1ac63008ec45b92c05a964e76f5
+      internalID: 2135342625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e77700c427b35f419df5511c167c3f3
+      internalID: 1813798647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_15
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3398d682f85e5c6469960c03c3a9ea2a
+      internalID: -1446699414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_16
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82a4e6ded69a7d4ba52504738de2cad
+      internalID: -1139846877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_17
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3963341e52ca7b4683c8c845e031948
+      internalID: -1089757238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_18
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a903ef0f43adf04ead81eb01e5a9cdb
+      internalID: -1314908088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_19
+      rect:
+        serializedVersion: 2
+        x: 4690
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481277dcc18fbf84c8732105646c01c9
+      internalID: -145837454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_Tier_Marco_20
+      rect:
+        serializedVersion: 2
+        x: 5628
+        y: 0
+        width: 938
+        height: 703
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25d5588fe613af4b877167d8a232896
+      internalID: 1622390537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Low_Tier_Marco_0: -1107510632
+      Low_Tier_Marco_1: -1457928484
+      Low_Tier_Marco_10: -2015854549
+      Low_Tier_Marco_11: 60628205
+      Low_Tier_Marco_12: 145509
+      Low_Tier_Marco_13: 2135342625
+      Low_Tier_Marco_14: 1813798647
+      Low_Tier_Marco_15: -1446699414
+      Low_Tier_Marco_16: -1139846877
+      Low_Tier_Marco_17: -1089757238
+      Low_Tier_Marco_18: -1314908088
+      Low_Tier_Marco_19: -145837454
+      Low_Tier_Marco_2: 757565455
+      Low_Tier_Marco_20: 1622390537
+      Low_Tier_Marco_3: 1937159676
+      Low_Tier_Marco_4: 1675803973
+      Low_Tier_Marco_5: -308973520
+      Low_Tier_Marco_6: 1170517609
+      Low_Tier_Marco_7: -2003000828
+      Low_Tier_Marco_8: 1141929887
+      Low_Tier_Marco_9: -2106768646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
