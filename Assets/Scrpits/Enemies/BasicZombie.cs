@@ -4,10 +4,14 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class BasicZombie : Enemy
 {
-    [SerializeField] float climbForce;
+    [Header("Specific to zombies")]
+    [SerializeField] float climbForce, climbCheckRadius;
+    [SerializeField] Transform climbCheck;
+    [SerializeField] LayerMask groundLayer;
     bool needToClimb;
     private void Update()
     {
+        needToClimb = Physics2D.OverlapCircle(climbCheck.position, climbCheckRadius, groundLayer);
         if (target != null)
         {
             ChasePlayer();
@@ -32,11 +36,17 @@ public class BasicZombie : Enemy
             if (target.position.x > transform.position.x)
             {
                 rb.AddForce(Vector2.right * chaseSpeed);
+                isFacingRight = true;
+                transform.localScale = new Vector3(-1, 1, 1);
+                print("the player is right");
             }
 
             if (target.position.x < transform.position.x)
             {
                 rb.AddForce(Vector2.left * chaseSpeed);
+                isFacingRight = false;
+                transform.localScale = new Vector3(1, 1, 1);
+                print("the player is left");
             }
 
             if (needToClimb)
@@ -44,16 +54,5 @@ public class BasicZombie : Enemy
                 rb.AddForce(Vector2.up * climbForce);
             }
         }
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.transform.position.y + collision.transform.localScale.y / 2 > transform.position.y && collision.gameObject.layer == 3) //if we are not standing on the objects roof
-        {
-            needToClimb = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        needToClimb = false;
     }
 }
