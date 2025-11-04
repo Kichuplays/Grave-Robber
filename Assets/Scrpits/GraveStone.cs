@@ -49,7 +49,11 @@ public class GraveStone : MonoBehaviour
         // Spawn enemy
         Vector3 spawnPos = (spawnPoint != null) ? spawnPoint.position : transform.position;
         if (enemyPrefab != null)
-            Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        {
+            GameObject objectToSpawn = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+            objectToSpawn.GetComponent<Enemy>().target = GameObject.Find("Player").transform;
+        }
+            
         else
             Debug.LogWarning("No enemyPrefab assigned!");
 
