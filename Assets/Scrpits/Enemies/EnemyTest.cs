@@ -11,13 +11,18 @@ public class EnemyTest : Enemy
     [SerializeField] float timeUntilNextPathUpdate = 1f; //the time until the path is updated again in seconds
     [SerializeField] LayerMask losFocus;
     [SerializeField] Transform aimingThing;
+    [SerializeField] float fireRate;
+    [SerializeField] float shootingOffset;
+    [SerializeField] GameObject fireBallPreFab;
+    [SerializeField] [Range(0,1)] float invisOffset;
 
     Path path; //the path the ghost will follow
     int currentWaypoint = 0;
+    float fireCountUpp; //the thing that counts upp before ghost shoots
     bool hasLineOfSight;
 
     Seeker seeker; //the component that finds a path to follow
-
+    SpriteRenderer sr;
 
     private void Start()
     {
@@ -47,7 +52,19 @@ public class EnemyTest : Enemy
         if (Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
         {
             PathToTarget();
-
+            if (fireCountUpp != 0)
+            {
+                fireCountUpp = 0;
+            }
+        }
+        else
+        {
+            fireCountUpp += Time.deltaTime;
+            if(fireCountUpp > fireRate)
+            {
+                ShootFireBall();
+                fireCountUpp = 0;
+            }
         }
     }
 
@@ -76,6 +93,7 @@ public class EnemyTest : Enemy
         if(Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+
         }
     }
 
@@ -88,11 +106,18 @@ public class EnemyTest : Enemy
         }
     }
 
-    void AimFireball()
+    void ShootFireBall()
     {
         Vector3 look = transform.InverseTransformPoint(target.position);
-        float Angle = Mathf.Atan2(look.y, look.y) * Mathf.Rad2Deg - 90;
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
 
-        aimingThing.Rotate(0, 0, Angle);
+        aimingThing.Rotate(0, 0, angle);
+
+        GameObject fireball = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
+
+        aimingThing.Rotate(0, 0, -angle);
+        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * fireball.GetComponent<FireBall>().speed);
+
+        print("FIRE BALL MADA FUCKA");
     }
 }
