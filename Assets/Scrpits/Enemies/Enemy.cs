@@ -7,7 +7,11 @@ public class Enemy : MonoBehaviour
 {
     [Header("Speeds")]
     [SerializeField] protected float chaseSpeed;
-    [SerializeField] protected float patrolSpeed;
+    [SerializeField] protected float passiveSpeed;
+
+    [Header("Damage")]
+    [SerializeField] int health = 10;
+    [SerializeField] Vector2 knockBack;
 
     [Header("Targeting")]
     public Transform target; //the thing they are going to attack
@@ -43,5 +47,15 @@ public class Enemy : MonoBehaviour
     void Patrol()
     {
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        rb.AddForce(knockBack * -transform.localScale.x);
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
