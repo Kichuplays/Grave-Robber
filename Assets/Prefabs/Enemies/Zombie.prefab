@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8932337588389952526}
   - component: {fileID: 4702369112117668509}
   - component: {fileID: 6483752736811157438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ MonoBehaviour:
   target: {fileID: 0}
   isAttacking: 0
   targetDistance: 0.5
-  climbForce: 2
+  climbForce: 2.5
   climbCheckRadius: 0.2
   climbCheck: {fileID: 271689963763997921}
   groundLayer:
