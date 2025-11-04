@@ -27,14 +27,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Move(moveDirection);
 
-            if (moveDirection > 0 && !isFacingRight)
-            {
-                Flip();
-            }
-            if (moveDirection < 0 && isFacingRight)
-            {
-                Flip();
-            }
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 Jump();
@@ -50,10 +42,5 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-    }
-    private void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
     }
 }

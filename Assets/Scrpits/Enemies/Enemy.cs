@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [Header("Damage")]
     [SerializeField] int health = 10;
     [SerializeField] float knockBack;
+    public int damage = 1;
 
     [Header("Targeting")]
     public Transform target; //the thing they are going to attack
@@ -20,6 +21,8 @@ public class Enemy : MonoBehaviour
     protected bool isFacingRight;
 
     protected Rigidbody2D rb;
+
+    public int scoreValue;
 
     private void Start()
     {
@@ -49,6 +52,21 @@ public class Enemy : MonoBehaviour
 
     }
 
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
+
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+            }
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -56,6 +74,8 @@ public class Enemy : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            ScoreManager.Instance.AddScore(scoreValue);
         }
     }
+
 }
