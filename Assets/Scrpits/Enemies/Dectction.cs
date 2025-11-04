@@ -10,7 +10,7 @@ public class Dectction : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            print("PlayerTetected");
+            print("PlayerDetected");
             foreach (Enemy enemy in enemiesThatActivate)
             {
                 enemy.target = collision.transform;

@@ -9,7 +9,8 @@ public class EnemyTest : Enemy
     [Header("Uniqe to ghost")]
     [SerializeField] float newWaypointDistance; //the desired distance from the current waypoint before chosing a new waypoint
     [SerializeField] float timeUntilNextPathUpdate = 1f; //the time until the path is updated again in seconds
-    [SerializeField] LayerMask losIgnore;
+    [SerializeField] LayerMask losFocus;
+    [SerializeField] Transform aimingThing;
 
     Path path; //the path the ghost will follow
     int currentWaypoint = 0;
@@ -28,24 +29,22 @@ public class EnemyTest : Enemy
 
     private void Update()
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, target.position - transform.position, Vector2.Distance(target.position, rb.position), losIgnore);
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, target.position - transform.position, Vector2.Distance(target.position, rb.position), losFocus); //shoot a ray att the target
         if (ray.collider != null)
         {
-            hasLineOfSight = ray.collider.gameObject.name == "Player";
-            if (hasLineOfSight && Vector2.Distance(rb.position, target.position) > targetDistance)
+            hasLineOfSight = ray.collider.gameObject.name == "Player"; //if it hits the player we have line of sight
+            if (hasLineOfSight)
             {
-                Debug.DrawRay(transform.position, target.position - transform.position, Color.blue);
+                Debug.DrawRay(transform.position, target.position - transform.position, Color.blue); //draw a blue ray if ghost has line of sight
             }
             else
             {
-                Debug.DrawRay(transform.position, target.position - transform.position, Color.red);
+                Debug.DrawRay(transform.position, target.position - transform.position, Color.red); //draw a red ray if otherwise
             }
         }
 
         print(ray.collider.gameObject.name);
-        print(Vector2.Distance(transform.position, target.position));
-
-        if (Vector2.Distance(rb.position, target.position) > targetDistance && !hasLineOfSight)
+        if (Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
         {
             PathToTarget();
 
@@ -74,7 +73,7 @@ public class EnemyTest : Enemy
 
     void GeneratePath()
     {
-        if(Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight && target != null)
+        if(Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
@@ -87,5 +86,13 @@ public class EnemyTest : Enemy
             path = p;
             currentWaypoint = 0;
         }
+    }
+
+    void AimFireball()
+    {
+        Vector3 look = transform.InverseTransformPoint(target.position);
+        float Angle = Mathf.Atan2(look.y, look.y) * Mathf.Rad2Deg - 90;
+
+        aimingThing.Rotate(0, 0, Angle);
     }
 }
