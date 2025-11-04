@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Image healthbar;
+    public float healthamount = 100f;
 
-    // Update is called once per frame
-    void Update()
+
+  
+    public void Takedamage(float damage)
     {
-        
+        healthamount -= damage;
+        healthbar.fillAmount = healthamount / 100f;
+
+    }
+    public void heal(float heal)
+    {
+        healthamount += heal;
+        healthamount = Mathf.Clamp(healthamount, 0, 100);
+
+        healthbar.fillAmount = healthamount / 100f;
+
     }
 }
