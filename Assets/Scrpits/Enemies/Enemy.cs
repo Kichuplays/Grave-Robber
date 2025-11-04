@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public Transform target; //the thing they are going to attack
     public bool isAttacking;
     [SerializeField] protected float targetDistance; //the desiered distane between the target and self
+    protected bool isFacingRight;
 
     protected Rigidbody2D rb;
 
