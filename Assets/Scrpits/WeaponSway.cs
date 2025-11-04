@@ -3,9 +3,9 @@ using UnityEngine;
 public class WeaponSway : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private float rotateSpeed = 5f;
-    private float followStrength = 10f;
-    private float damping = 100f; // How much drag/smoothness it has
+    public float rotateSpeed = 5f;
+    public float followStrength = 10f;
+    public float damping = 100f; // How much drag/smoothness it has
 
     private Vector2 targetPos;
 

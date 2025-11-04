@@ -6,23 +6,25 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Image healthbar;
-    public float healthamount = 100f;
+
+    public int maxHealth = 3;
+    public int currentHealth;
 
 
-  
-    public void Takedamage(float damage)
+    public void Start()
     {
-        healthamount -= damage;
-        healthbar.fillAmount = healthamount / 100f;
+        currentHealth = maxHealth;
 
     }
-    public void heal(float heal)
+    public void Update()
     {
-        healthamount += heal;
-        healthamount = Mathf.Clamp(healthamount, 0, 100);
-
-        healthbar.fillAmount = healthamount / 100f;
-
+        
     }
+
+    void TakeDamage(int Damage)
+    {
+        currentHealth -= Damage;
+    }
+
+
 }
