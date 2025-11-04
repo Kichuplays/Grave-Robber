@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
 
     protected Rigidbody2D rb;
 
+    public int scoreValue;
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -56,6 +58,7 @@ public class Enemy : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            ScoreManager.Instance.AddScore(scoreValue);
         }
     }
 }
