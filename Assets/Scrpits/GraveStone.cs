@@ -1,5 +1,7 @@
+using Cinemachine.Utility;
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class GraveStone : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class GraveStone : MonoBehaviour
     public Transform spawnPoint;     // Optional spawn position (can be empty)
 
     public SpriteRenderer spriteRenderer;
+
 
     private void Start()
     {
@@ -22,6 +25,16 @@ public class GraveStone : MonoBehaviour
         // Only react to shovel
         if (collision.CompareTag("Shovel"))
         {
+            //GetComponent<WeaponSway>().damping = 200f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Only react to shovel
+        if (collision.CompareTag("Shovel"))
+        {
+            //GetComponent<WeaponSway>().damping = 50f;
             StartCoroutine(SpawnCoroutine());
             if (spriteRenderer != null)
                 spriteRenderer.enabled = false;
