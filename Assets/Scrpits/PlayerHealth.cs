@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public ButtonUI gameManager;
 
     public int maxHealth = 3;
     public int currentHealth;
+    public int Damage = 1;
 
 
     public void Start()
@@ -18,9 +20,14 @@ public class PlayerHealth : MonoBehaviour
     }
   
 
-    void TakeDamage(int Damage)
+    public void TakeDamage(int Damage)
     {
         currentHealth -= Damage;
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            gameManager.Winner();
+        }
     }
 
 
