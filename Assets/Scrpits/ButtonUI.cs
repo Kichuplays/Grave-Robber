@@ -12,17 +12,22 @@ public class ButtonUI : MonoBehaviour
     {
         if (winnerUI.activeInHierarchy) //döljer mus-cursorn
         {
-            Cursor.visible = true;
+           // Cursor.visible = true;
         }
         else
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
     }
 
     public void Winner() //Poppar up winner UI
     {
         winnerUI.SetActive(true);
+    }
+
+    public void Play()
+    {
+        winnerUI.SetActive(false);
     }
 
     public void Restart() //Restart knapp

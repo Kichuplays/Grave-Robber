@@ -24,10 +24,34 @@ public class Enemy : MonoBehaviour
 
     public int scoreValue;
 
+    public Vector2 chargeDirection;
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
+  
+    void Update()
+    {
+        float moveDirection = Input.GetAxis("Horizontal"); //if player kollar horizontellt
+        {
+            if (moveDirection > 0 && !isFacingRight)
+            {
+                Flip();
+            }
+            if (moveDirection < 0 && isFacingRight)
+            {
+                Flip();
+            }
+        }
+    }
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -49,7 +73,7 @@ public class Enemy : MonoBehaviour
             health -= damage;
             rb.AddForce((transform.position - target.position).normalized * knockBack);
         }
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
             ScoreManager.Instance.AddScore(scoreValue);
