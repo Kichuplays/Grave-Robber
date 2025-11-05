@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.09807757, g: 0.3584906, b: 0.15498574, a: 1}
   m_FlipX: 0
@@ -134,9 +134,10 @@ MonoBehaviour:
   chaseSpeed: 0.4
   passiveSpeed: 0
   health: 10
-  knockBack: {x: 0, y: 0}
+  knockBack: 0
+  damage: 1
   target: {fileID: 0}
-  isAttacking: 0
+  isAttacking: 1
   targetDistance: 0.5
   scoreValue: 10
   climbForce: 2.5
