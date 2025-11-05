@@ -14,7 +14,7 @@ public class EnemyTest : Enemy
     [SerializeField] float fireRate;
     [SerializeField] float shootingOffset;
     [SerializeField] GameObject fireBallPreFab;
-    [SerializeField] [Range(0,1)] float invisOffset;
+    [SerializeField] float fireBallSpeed;
 
     Path path; //the path the ghost will follow
     int currentWaypoint = 0;
@@ -116,7 +116,7 @@ public class EnemyTest : Enemy
         GameObject fireball = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
 
         aimingThing.Rotate(0, 0, -angle);
-        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * chaseSpeed);
+        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * fireBallSpeed);
 
         print("FIRE BALL MADA FUCKA");
     }
