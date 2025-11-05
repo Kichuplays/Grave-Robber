@@ -12,17 +12,20 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public int Damage = 1;
 
+    [SerializeField] float knockBack = 200; //added by hannes
+    Rigidbody2D rb;
 
     public void Start()
     {
         currentHealth = maxHealth;
-
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
   
 
-    public void TakeDamage(int Damage)
+    public void TakeDamage(int Damage, Transform attacker)
     {
         currentHealth -= Damage;
+        rb.AddForce((transform.position - attacker.position).normalized * knockBack);
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
