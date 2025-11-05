@@ -32,7 +32,7 @@ public class ButtonUI : MonoBehaviour
 
     public void Quit() //Quit knapp
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main menu");
     }
 
     public void OpenWebsite() //Quit knapp
