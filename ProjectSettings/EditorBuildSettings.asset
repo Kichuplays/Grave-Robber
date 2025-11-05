@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main menu.unity
     guid: 93e5c58fbb337034bae9abf70c0a23db
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/test map.unity
+    guid: e4447c333c9ef6e4bb3db2ffaa8f782d
   - enabled: 1
     path: Assets/Scenes/Lolipop.unity
     guid: f63a5e47478232f43b6f26f190b50028
