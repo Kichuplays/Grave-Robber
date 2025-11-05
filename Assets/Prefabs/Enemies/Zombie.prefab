@@ -133,7 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 0.4
   health: 10
-  knockBack: 200
   damage: 1
   target: {fileID: 0}
   isAttacking: 1
