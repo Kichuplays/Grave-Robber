@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 0.4
-  passiveSpeed: 0
   health: 10
   knockBack: 0
   damage: 1

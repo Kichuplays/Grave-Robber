@@ -23,7 +23,7 @@ public class GraveStone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Only react to shovel
-        if (collision.CompareTag("Shovel"))
+        if (collision.CompareTag("Shovel") || collision.CompareTag("Drill"))
         {
             //GetComponent<WeaponSway>().damping = 200f;
         }
@@ -32,7 +32,7 @@ public class GraveStone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         // Only react to shovel
-        if (collision.CompareTag("Shovel"))
+        if (collision.CompareTag("Shovel") || collision.CompareTag("Drill"))
         {
             //GetComponent<WeaponSway>().damping = 50f;
             StartCoroutine(SpawnCoroutine());

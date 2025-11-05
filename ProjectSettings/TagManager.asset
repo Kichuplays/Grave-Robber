@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shovel
   - Enemy
+  - Drill
   layers:
   - Default
   - TransparentFX
