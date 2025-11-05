@@ -21,11 +21,11 @@ public class DrillDamage : MonoBehaviour
 
     private Dictionary<Enemy, DamageData> activeTargets = new Dictionary<Enemy, DamageData>();
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!collision.CompareTag("Enemy")) return;
+        if (!collision.gameObject.CompareTag("Enemy")) return;
 
-        Enemy target = collision.GetComponent<Enemy>();
+        Enemy target = collision.gameObject.GetComponent<Enemy>();
         if (target == null) return;
 
         // Get or add enemy data
@@ -52,11 +52,11 @@ public class DrillDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy target = collision.GetComponent<Enemy>();
+            Enemy target = collision.gameObject.GetComponent<Enemy>();
             if (target != null && activeTargets.ContainsKey(target))
             {
                 activeTargets.Remove(target);
