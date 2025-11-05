@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShovelDamage : MonoBehaviour
 {
     public int damage;
-    
+    [SerializeField] float knockBack = 200;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +15,7 @@ public class ShovelDamage : MonoBehaviour
             if (collision.GetComponent<Enemy>())
             {
                 Enemy target = collision.GetComponent<Enemy>();
-                target.TakeDamage(damage, 0.5f, gameObject.GetComponent<Rigidbody2D>());
+                target.TakeDamage(damage, 0.5f, gameObject.GetComponent<Rigidbody2D>(), knockBack);
             }
         }
     }

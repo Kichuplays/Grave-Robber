@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
 
     [Header("Damage")]
     [SerializeField] int health = 10;
-    [SerializeField] float knockBack;
     public int damage = 1;
 
 
@@ -66,12 +65,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, float minDamageVel, Rigidbody2D arb)
+    public void TakeDamage(int damage, float minDamageVel, Rigidbody2D arb, float knockBack)
     {
         if(arb.velocity.magnitude > minDamageVel)
         {
             health -= damage;
-            rb.AddForce((arb.transform.position - target.position).normalized * knockBack);
+            rb.AddForce(arb.velocity.normalized * knockBack);
         }
         if (health <= 0)
         {
