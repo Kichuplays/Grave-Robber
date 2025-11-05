@@ -333,6 +333,7 @@ MonoBehaviour:
   targetDistance: 0
   isFacingRight: 0
   scoreValue: 10
+  chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 1
   timeUntilNextPathUpdate: 1
   explosionPreFab: {fileID: 1097883096405426924, guid: b1dc9b5efc1ce0748a5d1f951fe9dad9, type: 3}
@@ -976,7 +977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &244944144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1333,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &339651107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1841,7 +1842,7 @@ MonoBehaviour:
   m_Follow: {fileID: 127755582}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 20
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2243,6 +2244,7 @@ MonoBehaviour:
   targetDistance: 0
   isFacingRight: 0
   scoreValue: 10
+  chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 1
   timeUntilNextPathUpdate: 1
   explosionPreFab: {fileID: 1097883096405426924, guid: b1dc9b5efc1ce0748a5d1f951fe9dad9, type: 3}
@@ -2422,7 +2424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: health
@@ -2509,15 +2511,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06629e261d7d6a45b45f0b13e54a856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 0.3
-  health: 2
-  knockBack: 400
+  chaseSpeed: 1
+  health: 10
+  knockBack: 1000
   damage: 1
   target: {fileID: 127755582}
   isAttacking: 0
   targetDistance: 7.5
   isFacingRight: 0
   scoreValue: 15
+  chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 0.2
   timeUntilNextPathUpdate: 1
   losFocus:
@@ -2644,7 +2647,7 @@ Transform:
   m_GameObject: {fileID: 879220072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.25, y: 2.25, z: 0}
+  m_LocalPosition: {x: 20.25, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2668,7 +2671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &892986392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2835,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: health
@@ -3057,7 +3060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: health
@@ -3510,6 +3513,7 @@ MonoBehaviour:
   targetDistance: 0
   isFacingRight: 0
   scoreValue: 10
+  chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 1
   timeUntilNextPathUpdate: 1
   explosionPreFab: {fileID: 1097883096405426924, guid: b1dc9b5efc1ce0748a5d1f951fe9dad9, type: 3}
@@ -3957,11 +3961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2456559753988961027, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3317587066139922578, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4067110137793564618, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: healthBar
@@ -4061,6 +4065,7 @@ MonoBehaviour:
   targetDistance: 0
   isFacingRight: 0
   scoreValue: 10
+  chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 1
   timeUntilNextPathUpdate: 1
   explosionPreFab: {fileID: 1097883096405426924, guid: b1dc9b5efc1ce0748a5d1f951fe9dad9, type: 3}
@@ -4581,7 +4586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1676743662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4931,7 +4936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: health
@@ -5012,7 +5017,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5223,13 +5228,17 @@ PrefabInstance:
       propertyPath: knockBack
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 3466682367392902014, guid: 6ed62870a6abf36458ed91b6e6150cc5, type: 3}
+      propertyPath: chaseSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4515598155066788414, guid: 6ed62870a6abf36458ed91b6e6150cc5, type: 3}
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 4515598155066788414, guid: 6ed62870a6abf36458ed91b6e6150cc5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7643758314161761626, guid: 6ed62870a6abf36458ed91b6e6150cc5, type: 3}
       propertyPath: m_LocalPosition.x

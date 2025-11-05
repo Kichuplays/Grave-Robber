@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
         if(arb.velocity.magnitude > minDamageVel)
         {
             health -= damage;
-            rb.AddForce((transform.position - target.position).normalized * knockBack);
+            rb.AddForce((arb.transform.position - target.position).normalized * knockBack);
         }
         if (health <= 0)
         {
