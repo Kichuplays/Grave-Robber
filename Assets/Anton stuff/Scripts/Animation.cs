@@ -45,7 +45,7 @@ public class Animation : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
 
-                anim.Play("Run_Animation");
+                anim.Play("RunLeft_Animation");
 
             }
             else if (Input.GetKeyUp(KeyCode.A))
