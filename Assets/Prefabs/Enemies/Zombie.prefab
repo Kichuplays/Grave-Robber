@@ -132,13 +132,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 0.4
-  passiveSpeed: 0
   health: 10
-  knockBack: 0
+  knockBack: 200
   damage: 1
   target: {fileID: 0}
   isAttacking: 1
   targetDistance: 0.5
+  isFacingRight: 0
   scoreValue: 10
   climbForce: 2.5
   climbCheckRadius: 0.2
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.5
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 5c0c6cc8d5599bf49afea9068319daab, type: 2}

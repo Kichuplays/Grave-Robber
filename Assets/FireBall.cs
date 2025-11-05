@@ -18,6 +18,11 @@ public class FireBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        PlayerHealth pp = collision.gameObject.GetComponent<PlayerHealth>();
+        if(pp != null)
+        {
+            pp.TakeDamage(damage, transform);
+        }
         Destroy(gameObject);
     }
 }
