@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
 {
     [Header("Speeds")]
     [SerializeField] protected float chaseSpeed;
-    [SerializeField] protected float passiveSpeed;
 
     [Header("Damage")]
     [SerializeField] int health = 10;
@@ -62,7 +61,7 @@ public class Enemy : MonoBehaviour
 
             if (player != null)
             {
-                player.TakeDamage(damage);
+                player.TakeDamage(damage, transform);
             }
         }
     }
@@ -70,7 +69,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        rb.AddForce((target.position - transform.position).normalized * knockBack);
+        rb.AddForce((transform.position - target.position).normalized * knockBack);
         if(health <= 0)
         {
             Destroy(gameObject);
