@@ -15,7 +15,7 @@ public class ShovelDamage : MonoBehaviour
             if (collision.GetComponent<Enemy>())
             {
                 Enemy target = collision.GetComponent<Enemy>();
-                target.TakeDamage(damage, 0.5f, gameObject.GetComponent<Rigidbody2D>(), knockBack);
+                target.TakeDamage(damage, 1, gameObject.GetComponent<Rigidbody2D>(), knockBack);
             }
         }
     }
