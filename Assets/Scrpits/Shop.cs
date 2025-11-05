@@ -1,18 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject shop;
+    public bool playerInRange = false;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            if (shop.activeSelf)
+                shopClose();
+            else
+                shopOpen();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+            shopClose(); // optional: close the shop when leaving
+        }
+    }
+
+    void shopOpen()
+    {
+        shop.SetActive(true);
+    }
+
+    void shopClose()
+    {
+        shop.SetActive(false);
     }
 }
