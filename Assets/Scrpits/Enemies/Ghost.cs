@@ -38,7 +38,7 @@ public class Ghost : Enemy
         RaycastHit2D ray = Physics2D.Raycast(transform.position, target.position - transform.position, Vector2.Distance(target.position, rb.position), losFocus); //shoot a ray att the target
         if (ray.collider != null)
         {
-            hasLineOfSight = ray.collider.gameObject.name == "Player"; //if it hits the player we have line of sight
+            hasLineOfSight = ray.collider.gameObject.name == target.gameObject.name; //if it hits the target we have line of sight
             if (hasLineOfSight)
             {
                 Debug.DrawRay(transform.position, target.position - transform.position, Color.blue); //draw a blue ray if ghost has line of sight
