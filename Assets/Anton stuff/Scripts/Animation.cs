@@ -42,6 +42,16 @@ public class Animation : MonoBehaviour
             {
                 anim.Play("Idle_Animation");
             }
+            if (Input.GetKey(KeyCode.A))
+            {
+
+                anim.Play("Run_Animation");
+
+            }
+            else if (Input.GetKeyUp(KeyCode.A))
+            {
+                anim.Play("Idle_Animation");
+            }
         }
     }
 
