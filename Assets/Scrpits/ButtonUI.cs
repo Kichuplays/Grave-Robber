@@ -25,6 +25,11 @@ public class ButtonUI : MonoBehaviour
         winnerUI.SetActive(true);
     }
 
+    public void Play()
+    {
+        winnerUI.SetActive(false);
+    }
+
     public void Restart() //Restart knapp
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
