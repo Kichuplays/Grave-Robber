@@ -19,13 +19,13 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
   
 
     public void TakeDamage(int Damage, Transform attacker)
     {
-        //healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);
         currentHealth -= Damage;
         if(attacker.position.y - attacker.localScale.y/2 < transform.position.y + transform.localScale.y/2 - 0.25 && attacker.position.y + attacker.localScale.y / 2 > transform.position.y - transform.localScale.y / 2 + 0.25)
         {
