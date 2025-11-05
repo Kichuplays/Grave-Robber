@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
     public int Damage = 1;
-
+    public HealthBar healthBar;
     [SerializeField] float knockBack = 200; //added by hannes
     Rigidbody2D rb;
 
@@ -19,11 +19,13 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        healthBar.SetMaxHealth(maxHealth);
     }
   
 
     public void TakeDamage(int Damage, Transform attacker)
     {
+        healthBar.SetHealth(currentHealth);
         currentHealth -= Damage;
         if(attacker.position.y - attacker.localScale.y/2 < transform.position.y + transform.localScale.y/2 - 0.25 && attacker.position.y + attacker.localScale.y / 2 > transform.position.y - transform.localScale.y / 2 + 0.25)
         {
