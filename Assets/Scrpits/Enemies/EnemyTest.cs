@@ -116,7 +116,7 @@ public class EnemyTest : Enemy
         GameObject fireball = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
 
         aimingThing.Rotate(0, 0, -angle);
-        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * fireball.GetComponent<FireBall>().speed);
+        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * chaseSpeed);
 
         print("FIRE BALL MADA FUCKA");
     }

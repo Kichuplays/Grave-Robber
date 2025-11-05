@@ -9,7 +9,7 @@ public class WeaponSway : MonoBehaviour
 
     private Vector2 targetPos;
 
-    private float shovelLength = 1.5f; // distance from handle to tip
+    [SerializeField] private float shovelLength = 1.5f; // distance from handle to tip
 
     void Start()
     {

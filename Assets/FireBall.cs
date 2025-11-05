@@ -16,7 +16,7 @@ public class FireBall : MonoBehaviour
         rb.gravityScale = 0;
     }
 
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
     }
