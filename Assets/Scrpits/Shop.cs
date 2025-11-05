@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] GameObject shop;
     public bool playerInRange = false;
+    
 
     void Update()
     {
@@ -39,10 +40,12 @@ public class Shop : MonoBehaviour
     void shopOpen()
     {
         shop.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     void shopClose()
     {
         shop.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
