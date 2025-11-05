@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float knockBack;
     public int damage = 1;
 
+
     [Header("Targeting")]
     public Transform target;
     public bool isAttacking;
@@ -41,10 +42,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, float minDamageVel, Rigidbody2D arb)
     {
-        health -= damage;
-        rb.AddForce((transform.position - target.position).normalized * knockBack);
+        if(arb.velocity.magnitude > minDamageVel)
+        {
+            health -= damage;
+            rb.AddForce((transform.position - target.position).normalized * knockBack);
+        }
         if(health <= 0)
         {
             Destroy(gameObject);

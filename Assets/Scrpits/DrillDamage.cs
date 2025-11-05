@@ -47,7 +47,7 @@ public class DrillDamage : MonoBehaviour
         // Apply tick damage if timer expired
         if (data.timer <= 0f)
         {
-            target.TakeDamage(currentDamage);
+            target.TakeDamage(currentDamage, 0, gameObject.GetComponent<Rigidbody2D>());
             data.timer = currentTickRate; // Reset timer based on *ramped* tick rate
         }
     }
