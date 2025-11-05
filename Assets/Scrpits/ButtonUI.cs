@@ -12,11 +12,11 @@ public class ButtonUI : MonoBehaviour
     {
         if (winnerUI.activeInHierarchy) //döljer mus-cursorn
         {
-            Cursor.visible = true;
+           // Cursor.visible = true;
         }
         else
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
     }
 
