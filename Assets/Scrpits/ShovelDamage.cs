@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShovelDamage : MonoBehaviour
 {
     public int damage;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +15,7 @@ public class ShovelDamage : MonoBehaviour
             if (collision.GetComponent<Enemy>())
             {
                 Enemy target = collision.GetComponent<Enemy>();
-                target.TakeDamage(damage);
+                target.TakeDamage(damage, 0.5f, gameObject.GetComponent<Rigidbody2D>());
             }
         }
     }

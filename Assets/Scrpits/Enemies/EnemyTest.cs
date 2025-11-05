@@ -6,20 +6,13 @@ using Pathfinding;
 
 public class EnemyTest : Enemy
 {
-    [Header("Uniqe to ghost")]
-    [SerializeField] float newWaypointDistance; //the desired distance from the current waypoint before chosing a new waypoint
+    [Header("Uniqe to Fire Skull")]
+    [SerializeField] float newWaypointDistance = 0.2f; //the desired distance from the current waypoint before chosing a new waypoint
     [SerializeField] float timeUntilNextPathUpdate = 1f; //the time until the path is updated again in seconds
-    [SerializeField] LayerMask losFocus;
-    [SerializeField] Transform aimingThing;
-    [SerializeField] float fireRate;
-    [SerializeField] float shootingOffset;
-    [SerializeField] GameObject fireBallPreFab;
-    [SerializeField] float fireBallSpeed;
+    [SerializeField] GameObject explosionPreFab;
 
-    Path path; //the path the ghost will follow
+    Path path; //the path the Fire Skull will follow
     int currentWaypoint = 0;
-    float fireCountUpp; //the thing that counts upp before ghost shoots
-    bool hasLineOfSight;
 
     Seeker seeker; //the component that finds a path to follow
     SpriteRenderer sr;
@@ -34,43 +27,19 @@ public class EnemyTest : Enemy
 
     private void Update()
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, target.position - transform.position, Vector2.Distance(target.position, rb.position), losFocus); //shoot a ray att the target
-        if (ray.collider != null)
-        {
-            hasLineOfSight = ray.collider.gameObject.name == "Player"; //if it hits the player we have line of sight
-            if (hasLineOfSight)
-            {
-                Debug.DrawRay(transform.position, target.position - transform.position, Color.blue); //draw a blue ray if ghost has line of sight
-            }
-            else
-            {
-                Debug.DrawRay(transform.position, target.position - transform.position, Color.red); //draw a red ray if otherwise
-            }
-        }
+        PathToTarget();
+    }
 
-        print(ray.collider.gameObject.name);
-        if (Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == target.gameObject.name)
         {
-            PathToTarget();
-            if (fireCountUpp != 0)
-            {
-                fireCountUpp = 0;
-            }
-        }
-        else
-        {
-            fireCountUpp += Time.deltaTime;
-            if(fireCountUpp > fireRate)
-            {
-                ShootFireBall();
-                fireCountUpp = 0;
-            }
+            Explode();
         }
     }
 
     void PathToTarget()
     {
-        print("Following path");
         if(path == null)
         {
             return;
@@ -90,7 +59,7 @@ public class EnemyTest : Enemy
 
     void GeneratePath()
     {
-        if(Vector2.Distance(transform.position, target.position) > targetDistance && !hasLineOfSight)
+        if(Vector2.Distance(transform.position, target.position) > targetDistance)
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
 
@@ -106,18 +75,9 @@ public class EnemyTest : Enemy
         }
     }
 
-    void ShootFireBall()
+    void Explode()
     {
-        Vector3 look = transform.InverseTransformPoint(target.position);
-        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
-
-        aimingThing.Rotate(0, 0, angle);
-
-        GameObject fireball = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
-
-        aimingThing.Rotate(0, 0, -angle);
-        fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * fireBallSpeed);
-
-        print("FIRE BALL MADA FUCKA");
+        GameObject explosion = Instantiate(explosionPreFab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

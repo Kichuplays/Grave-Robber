@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Boners: " + score.ToString();
+            scoreText.text = "Coins: " + score.ToString();
         }
     }
 }
