@@ -14940,10 +14940,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1868700493}
   - component: {fileID: 1868700492}
-  - component: {fileID: 1868700491}
   - component: {fileID: 1868700490}
   - component: {fileID: 1868700489}
   - component: {fileID: 1868700494}
+  - component: {fileID: 1868700495}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -15023,27 +15023,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.1071358, y: 3.7796748}
   m_EdgeRadius: 0
---- !u!114 &1868700491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868700488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612996e626d2d6b4ba2ba681105a7159, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 70
-  groundCheck: {fileID: 742838099}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  isFacingRight: 1
-  rb: {fileID: 1868700489}
 --- !u!212 &1868700492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15134,6 +15113,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1868700495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868700488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1d389d71f53e44784a1a8d804f398b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1868700494}
+  moveSpeed: 10
+  jumpForce: 90
+  groundCheck: {fileID: 742838099}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  isFacingRight: 0
+  rb: {fileID: 1868700489}
 --- !u!1 &1869790243
 GameObject:
   m_ObjectHideFlags: 0

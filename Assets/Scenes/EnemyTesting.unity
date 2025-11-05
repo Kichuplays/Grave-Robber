@@ -233,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &244944144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -909,6 +909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: health
       value: 5
@@ -919,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 127755582}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: knockBack
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1141,7 +1145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2003319665586778760, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: jumpForce
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2456559753988961027, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: m_Layer
@@ -1150,6 +1154,10 @@ PrefabInstance:
     - target: {fileID: 3317587066139922578, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067110137793564618, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
+      propertyPath: knockBack
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4356863404345905577, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: m_Name
@@ -1166,6 +1174,10 @@ PrefabInstance:
     - target: {fileID: 7951007727051537950, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
       propertyPath: damage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114531831386476124, guid: 083d3e664b227b2488a72cc85efde94e, type: 3}
+      propertyPath: shovelLength
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1205,12 +1217,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe7da929b694744d935b92299458397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 200
-  passiveSpeed: 1
+  chaseSpeed: 2
   health: 2
-  knockBack: 100
+  knockBack: 300
   damage: 1
-  target: {fileID: 0}
+  target: {fileID: 127755582}
   isAttacking: 0
   targetDistance: 1
   scoreValue: 0
@@ -1223,7 +1234,7 @@ MonoBehaviour:
   fireRate: 2
   shootingOffset: 2
   fireBallPreFab: {fileID: 1097883096405426924, guid: bca87d2454fa0b748bf0e6ca6127efcc, type: 3}
-  invisOffset: 1
+  fireBallSpeed: 0
 --- !u!114 &1513080991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,7 +1410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1676743662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1574,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 127755582}
     - target: {fileID: 8932337588389952526, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
       propertyPath: knockBack
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

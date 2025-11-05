@@ -14,10 +14,10 @@ public class Enemy : MonoBehaviour
     public int damage = 1;
 
     [Header("Targeting")]
-    public Transform target; //the thing they are going to attack
+    public Transform target;
     public bool isAttacking;
     [SerializeField] protected float targetDistance; //the desiered distane between the target and self
-    protected bool isFacingRight;
+    public bool isFacingRight;
 
     protected Rigidbody2D rb;
 
@@ -27,31 +27,6 @@ public class Enemy : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
-
-    private void Update()
-    {
-        if(target != null)
-        {
-            ChasePlayer();
-            isAttacking = true;
-        }
-        else
-        {
-            Patrol();
-        }
-    }
-
-    void ChasePlayer()
-    {
-
-    }
-
-    void Patrol()
-    {
-
-    }
-
-
 
     void OnCollisionEnter2D(Collision2D collision)
     {
