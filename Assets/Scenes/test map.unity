@@ -15125,7 +15125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1d389d71f53e44784a1a8d804f398b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1868700495}
+  anim: {fileID: 1868700494}
   moveSpeed: 10
   jumpForce: 90
   groundCheck: {fileID: 742838099}
@@ -15133,7 +15133,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  isFacingRight: 1
+  isFacingRight: 0
   rb: {fileID: 1868700489}
 --- !u!1 &1869790243
 GameObject:

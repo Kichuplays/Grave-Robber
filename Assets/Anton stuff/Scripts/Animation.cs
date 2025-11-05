@@ -5,7 +5,7 @@ using System;
 
 public class Animation : MonoBehaviour
 {
-    public Animation anim;
+    public Animator anim;
     public float moveSpeed;
     public float jumpForce;
     public Transform groundCheck;
@@ -32,22 +32,17 @@ public class Animation : MonoBehaviour
             {
                 Jump();
             }
+            if (Input.GetKey(KeyCode.D))
+            {
+                
+                anim.Play("Run_Animation");
+                
+            }
+            else if (Input.GetKeyUp(KeyCode.D))
+            {
+                anim.Play("Idle_Animation");
+            }
         }
-        if (Input.GetKey(KeyCode.D))
-        {
-            
-            anim.Play("Run_Animation");
-            
-        }
-        else if (Input.GetKeyUp(KeyCode.D))
-        {
-            anim.Play("Idle_Animation");
-        }
-    }
-
-    private void Play(string v)
-    {
-        throw new NotImplementedException();
     }
 
     public void Move(float direction)
