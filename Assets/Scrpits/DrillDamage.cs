@@ -12,6 +12,15 @@ public class DrillDamage : MonoBehaviour
     public float minTickRate = 0.1f;     // Fastest possible tick speed
     public float rampSpeedDmg = 1f;      // How quickly the ramp increases per second
     public float rampSpeedTick = 2f;     // higher number = faster tickrate
+
+    public KeyCode attachKey = KeyCode.E;
+    public KeyCode detachKey = KeyCode.R;
+
+    public Rigidbody2D playerRb;   // Drag in the player’s Rigidbody2D
+    private Rigidbody2D attachedEnemy;
+
+    private DistanceJoint2D joint;
+
     // Track each enemy individually
     private class DamageData
     {
@@ -20,6 +29,56 @@ public class DrillDamage : MonoBehaviour
     }
 
     private Dictionary<Enemy, DamageData> activeTargets = new Dictionary<Enemy, DamageData>();
+
+    void Start()
+    {
+        joint = GetComponent<DistanceJoint2D>();
+
+        // Start attached to the player
+        joint.connectedBody = playerRb;
+        joint.distance = Vector2.Distance(transform.position, playerRb.position);
+        joint.enabled = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            attachedEnemy = collision.collider.GetComponent<Rigidbody2D>();
+        }
+    }
+
+    void Update()
+    {
+        // Attach to the enemy
+        if (Input.GetKeyDown(attachKey) && attachedEnemy != null)
+        {
+            joint.connectedBody = attachedEnemy;
+            joint.distance = Vector2.Distance(transform.position, attachedEnemy.position);
+        }
+
+        // Detach (return to player)
+        if (Input.GetKeyDown(detachKey))
+        {
+            ReconnectToPlayer();
+        }
+    }
+
+    // Called when enemy dies
+    public void EnemyKilled(Rigidbody2D enemyRb)
+    {
+        if (attachedEnemy == enemyRb)
+        {
+            ReconnectToPlayer();
+        }
+    }
+
+    private void ReconnectToPlayer()
+    {
+        attachedEnemy = null;
+        joint.connectedBody = playerRb;
+        joint.distance = Vector2.Distance(transform.position, playerRb.position);
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
