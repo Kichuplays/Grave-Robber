@@ -1696,6 +1696,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2427270394576444250, guid: 0816507355be2f34dbf73c2367d83616, type: 3}
   spawnPoint: {fileID: 536196568}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &172209582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2095,6 +2097,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2427270394576444250, guid: 0816507355be2f34dbf73c2367d83616, type: 3}
   spawnPoint: {fileID: 711847564}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &192138390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2474,6 +2478,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1496284047}
   spawnPoint: {fileID: 738188014}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &230687484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3715,6 +3721,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 1312044185}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &390069840
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6344,6 +6352,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 375965530037905564, guid: 4b91b34fa1d929e48b515c5a4f2b336f, type: 3}
   spawnPoint: {fileID: 91085155}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &619067559
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6920,6 +6930,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 375965530037905564, guid: 4b91b34fa1d929e48b515c5a4f2b336f, type: 3}
   spawnPoint: {fileID: 1258125389}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &682939550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11704,6 +11716,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1496284047}
   spawnPoint: {fileID: 1980392265}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &1008536051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23315,6 +23329,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 262351466}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &1930296098
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24086,6 +24102,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 1639613187}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &1949881599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24233,6 +24251,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 485654804}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &1951908195
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27247,6 +27267,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 1655786975}
   spriteRenderer: {fileID: 0}
+  swayShovel: {fileID: 0}
+  swayDrill: {fileID: 0}
 --- !u!212 &2130218913
 SpriteRenderer:
   m_ObjectHideFlags: 0
