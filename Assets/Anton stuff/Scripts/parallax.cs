@@ -6,7 +6,7 @@ public class parallax : MonoBehaviour
 {
 
     public float multiplier;
-    public GameObject camera;
+    public new GameObject camera;
     public Vector3 startPosition;
 
     // Start is called before the first frame update
