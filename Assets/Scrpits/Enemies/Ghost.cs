@@ -79,7 +79,6 @@ public class Ghost : Enemy
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        print(direction.magnitude);
         rb.AddForce(direction * chaseSpeed);
 
         float distance = Vector2.Distance(path.vectorPath[currentWaypoint], rb.position);

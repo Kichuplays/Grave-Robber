@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 1
-  health: 3
+  health: 2
   damage: 1
   target: {fileID: 0}
   isAttacking: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   fireRate: 1.5
   shootingOffset: 2
   fireBallPreFab: {fileID: 1097883096405426924, guid: bca87d2454fa0b748bf0e6ca6127efcc, type: 3}
-  fireBallSpeed: 400
+  fireBallSpeed: 500
 --- !u!58 &8065212868821581215
 CircleCollider2D:
   m_ObjectHideFlags: 0
