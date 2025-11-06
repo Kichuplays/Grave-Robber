@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 5796185197295745343}
   - component: {fileID: 3476306475192027818}
   - component: {fileID: 8785113201477900970}
+  - component: {fileID: 6148515789517244839}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -280,3 +281,21 @@ MonoBehaviour:
     m_Bits: 8
   isFacingRight: 0
   rb: {fileID: 5796185197295745343}
+--- !u!114 &6148515789517244839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323139679588266549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300e8be254a8b7c43a6288e41e7d5ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  Damage: 1
+  healthBar: {fileID: 0}
+  knockBack: 200
