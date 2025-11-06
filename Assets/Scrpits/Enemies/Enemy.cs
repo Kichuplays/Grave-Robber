@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float targetDistance; //the desiered distane between the target and self
     public bool isFacingRight;
 
+    public DrillDamage drill;
     protected Rigidbody2D rb;
 
     public int scoreValue;
@@ -76,6 +77,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             ScoreManager.Instance.AddScore(scoreValue);
+            drill.EnemyKilled(rb);
         }
     }
 
