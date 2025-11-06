@@ -61,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.463552, y: -0.3096099, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7783643580050551741}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c400523fff62cd4cb0b98add33eb9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 2
+  chaseSpeed: 1
   health: 4
   damage: 2
   target: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   isFacingRight: 0
   scoreValue: 10
   chargeDirection: {x: 0, y: 0}
-  climbForce: 4
+  climbForce: 5
   climbCheckRadius: 0.2
   climbCheck: {fileID: 7783643580050551741}
   groundLayer:
