@@ -108,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -188,12 +188,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 1
-  health: 3
+  health: 2
   damage: 1
   target: {fileID: 0}
   isAttacking: 0
   targetDistance: 10
   isFacingRight: 0
+  drill: {fileID: 0}
   scoreValue: 15
   chargeDirection: {x: 0, y: 0}
   newWaypointDistance: 0.2
@@ -205,7 +206,7 @@ MonoBehaviour:
   fireRate: 1.5
   shootingOffset: 2
   fireBallPreFab: {fileID: 1097883096405426924, guid: bca87d2454fa0b748bf0e6ca6127efcc, type: 3}
-  fireBallSpeed: 400
+  fireBallSpeed: 500
 --- !u!58 &8065212868821581215
 CircleCollider2D:
   m_ObjectHideFlags: 0

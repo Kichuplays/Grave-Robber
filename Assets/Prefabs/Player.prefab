@@ -351,9 +351,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 5
-  m_AngularDrag: 3
+  m_Mass: 0.1
+  m_LinearDrag: 10
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -379,10 +379,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7487231830682428440}
-  rotateSpeed: 3
-  followStrength: 7.5
+  rotateSpeed: 5
+  followStrength: 1.5
   damping: 100
-  shovelLength: 1.5
+  shovelLength: 4
 --- !u!232 &4583139975619236937
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6188897725751597529}
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 500
+  jumpForce: 300
   groundCheck: {fileID: 6188897725751597529}
   groundCheckRadius: 0.2
   groundLayer:
@@ -572,7 +572,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.333333}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!50 &861835498925090773
 Rigidbody2D:
