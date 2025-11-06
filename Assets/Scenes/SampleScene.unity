@@ -352,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shop: {fileID: 877823273}
   playerInRange: 0
+  Pause: {fileID: 1024817355}
 --- !u!1 &172349683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  knockBack: 200
 --- !u!232 &812090642
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -4333,7 +4335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376168864
 RectTransform:
   m_ObjectHideFlags: 0
