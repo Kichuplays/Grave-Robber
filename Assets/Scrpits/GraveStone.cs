@@ -11,7 +11,8 @@ public class GraveStone : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-
+    public WeaponSway swayShovel;
+    public WeaponSway swayDrill;
     private void Start()
     {
         // Ensure collider acts as a trigger
@@ -25,7 +26,8 @@ public class GraveStone : MonoBehaviour
         // Only react to shovel
         if (collision.CompareTag("Shovel") || collision.CompareTag("Drill"))
         {
-            //GetComponent<WeaponSway>().damping = 200f;
+            swayShovel.followStrength = 1f;
+            swayDrill.followStrength = 1f;
         }
     }
 
@@ -34,7 +36,8 @@ public class GraveStone : MonoBehaviour
         // Only react to shovel
         if (collision.CompareTag("Shovel") || collision.CompareTag("Drill"))
         {
-            //GetComponent<WeaponSway>().damping = 50f;
+            swayShovel.followStrength = 10f;
+            swayDrill.followStrength = 10f;
             StartCoroutine(SpawnCoroutine());
             if (spriteRenderer != null)
                 spriteRenderer.enabled = false;
