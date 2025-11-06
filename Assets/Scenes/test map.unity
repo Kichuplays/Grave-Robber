@@ -2471,7 +2471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 290340066}
+  enemyPrefab: {fileID: 1496284047}
   spawnPoint: {fileID: 738188014}
   spriteRenderer: {fileID: 0}
 --- !u!212 &230687484
@@ -2801,11 +2801,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1930296095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &290340066 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
-  m_PrefabInstance: {fileID: 426829003}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &292774039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,6 +4072,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501543150872759105, guid: 3e525e73ade4f5248880865689df5395, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501543150872759105, guid: 3e525e73ade4f5248880865689df5395, type: 3}
+      propertyPath: climbForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1962737922358482969, guid: 3e525e73ade4f5248880865689df5395, type: 3}
       propertyPath: m_LocalPosition.x
       value: -329.74408
@@ -11372,7 +11375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
+  enemyPrefab: {fileID: 1496284047}
   spawnPoint: {fileID: 1980392265}
   spriteRenderer: {fileID: 0}
 --- !u!212 &1008536051
@@ -17958,6 +17961,11 @@ Transform:
   - {fileID: 520131998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1496284047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+  m_PrefabInstance: {fileID: 871481756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1505042673
 GameObject:
   m_ObjectHideFlags: 0
