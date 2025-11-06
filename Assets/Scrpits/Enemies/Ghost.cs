@@ -114,7 +114,8 @@ public class Ghost : Enemy
 
         aimingThing.Rotate(0, 0, angle);
 
-        GameObject fireball = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
+        GameObject fireBall = Instantiate(fireBallPreFab, rb.position, aimingThing.rotation);
+        fireBall.GetComponent<FireBall>().damage = damage;
 
         aimingThing.Rotate(0, 0, -angle);
         fireball.GetComponent<Rigidbody2D>().AddForce(fireball.transform.up * fireBallSpeed);
