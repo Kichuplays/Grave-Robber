@@ -379,10 +379,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7487231830682428440}
-  rotateSpeed: 3
-  followStrength: 7.5
+  rotateSpeed: 5
+  followStrength: 1.5
   damping: 100
-  shovelLength: 1.5
+  shovelLength: 4
 --- !u!232 &4583139975619236937
 DistanceJoint2D:
   m_ObjectHideFlags: 0
