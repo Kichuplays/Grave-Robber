@@ -228,7 +228,7 @@ MonoBehaviour:
   aimingThing: {fileID: 7743766266876035728}
   fireRate: 1.5
   shootingOffset: 2
-  fireBallPreFab: {fileID: 1097883096405426924, guid: bca87d2454fa0b748bf0e6ca6127efcc, type: 3}
+  fireBallPreFab: {fileID: 8512477207103172129, guid: bca87d2454fa0b748bf0e6ca6127efcc, type: 3}
   fireBallSpeed: 500
 --- !u!58 &8065212868821581215
 CircleCollider2D:
