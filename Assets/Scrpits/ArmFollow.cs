@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArmFollow : MonoBehaviour
+public class ArmFollow : MonoBehaviour //made by Atilla
 {
     public Transform player;
     public Transform shovelTip; // Point of the shovel or hammer

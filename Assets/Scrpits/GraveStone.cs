@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using System;
 
-public class GraveStone : MonoBehaviour
+public class GraveStone : MonoBehaviour //made by Atilla
 {
     [Header("Enemy Settings")]
     public GameObject enemyPrefab;   // The enemy to spawn

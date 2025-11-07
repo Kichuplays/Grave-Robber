@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Shovel : MonoBehaviour
+public class Shovel : MonoBehaviour //made by Atilla
 {
     private void LookAtMouse()
     {

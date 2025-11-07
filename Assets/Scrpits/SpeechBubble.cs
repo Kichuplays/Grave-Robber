@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeechBubble : MonoBehaviour
+public class SpeechBubble : MonoBehaviour //made by Atilla
 {
     [SerializeField] GameObject speechUI;
     // Start is called before the first frame update

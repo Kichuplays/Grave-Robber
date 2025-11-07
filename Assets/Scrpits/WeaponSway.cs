@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WeaponSway : MonoBehaviour
+public class WeaponSway : MonoBehaviour //made by Atilla
 {
     public Rigidbody2D rb;
     public float rotateSpeed = 5f;

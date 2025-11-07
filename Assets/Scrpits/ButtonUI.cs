@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonUI : MonoBehaviour
+public class ButtonUI : MonoBehaviour //made by Atilla
 {
     [SerializeField] GameObject winnerUI;
     
