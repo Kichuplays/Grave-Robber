@@ -1,4 +1,7 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 
@@ -45,6 +48,8 @@ public class ShopManager : MonoBehaviour
     
     private void Start()
     {
+
+        UpdateCoinText();
         // Gå igenom varje uppgradering som finns definierad i Inspectorn
         foreach (Upgrade upgrade in upgrades)
         {
@@ -86,6 +91,22 @@ public class ShopManager : MonoBehaviour
 
         }
     }
+
+    public void AddScore(int amount)
+    {
+        coins += amount; // Increase score
+        UpdateCoinText(); // Updaterar the UI
+    }
+    
+    void UpdateCoinText()
+    {
+        if (coinstext != null)
+        {
+            coinstext.text = "Coins: " + coins.ToString();
+        }
+    }
+
+
     //Köpa upgrade med pengar
     public void BuyUpgrade(Upgrade upgrade)
     {

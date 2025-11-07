@@ -20,7 +20,9 @@ public class BasicZombie : Enemy //script uses Enemy script as base, go look at 
         else //if there is no target
         {
             Idle(); //do jack shit
+            isAttacking = false;
         }
+        animator.SetBool("IsAttacking", isAttacking);
     }
 
     void Idle()
