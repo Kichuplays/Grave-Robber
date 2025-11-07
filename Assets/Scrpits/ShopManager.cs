@@ -1,4 +1,7 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 
@@ -45,6 +48,8 @@ public class ShopManager : MonoBehaviour
     
     private void Start()
     {
+
+        UpdateCoinText();
         // Gå igenom varje uppgradering som finns definierad i Inspectorn
         foreach (Upgrade upgrade in upgrades)
         {
@@ -79,10 +84,55 @@ public class ShopManager : MonoBehaviour
                     child.gameObject.GetComponent<Image>().sprite = upgrade.image;
                 }
             }
+            item.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                BuyUpgrade(upgrade);
+            });
+
         }
     }
 
-   
+    public void AddScore(int amount)
+    {
+        coins += amount; // Increase score
+        UpdateCoinText(); // Updaterar the UI
+    }
+    
+    void UpdateCoinText()
+    {
+        if (coinstext != null)
+        {
+            coinstext.text = "Coins: " + coins.ToString();
+        }
+    }
+
+
+    //Köpa upgrade med pengar
+    public void BuyUpgrade(Upgrade upgrade)
+    {
+        if (coins >= upgrade.cost)
+        {
+            coins -= upgrade.cost;
+            upgrade.quantity++;
+            upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();
+
+           // ApplyUpgrade(upgrade);
+
+        }
+    }
+    //Apply the upgrade to the player 
+     public void ApplyUpgrade(Upgrade upgrade) {
+        switch (upgrade.name)
+        {
+            case "Health":
+                Ph.currentHealth += 20;
+                break;
+            default:
+                Debug.Log("No upgrade available");
+                    break;
+        }
+     
+     }
     // Om den är öppen stängs den, och om den är stängd öppnas den
     public void ToggleShop()
     {

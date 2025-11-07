@@ -24,11 +24,18 @@ public class Ghost : Enemy
     bool needToPath; //checks if the ghost has to move
 
     Seeker seeker; //the component that finds a path to follow
+    Animator fireBallAnimator;
+    SpriteRenderer fireBallRenderer;
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
         seeker = gameObject.GetComponent<Seeker>();
+        fireBallAnimator = aimingThing.GetComponent<Animator>();
+        fireBallRenderer = aimingThing.GetComponent<SpriteRenderer>();
+
+        fireBallAnimator.enabled = false;
 
         InvokeRepeating("GeneratePath", 0f, timeUntilNextPathUpdate);
     }
@@ -51,6 +58,7 @@ public class Ghost : Enemy
 
         if (Vector2.Distance(transform.position, target.position) < targetDistance && hasLineOfSight == true)
         {
+            fireBallAnimator.SetFloat("FireCountUpp", fireCountUpp);
             needToPath = false;
             fireCountUpp += Time.deltaTime;
             if (fireCountUpp > fireRate)
@@ -58,9 +66,21 @@ public class Ghost : Enemy
                 ShootFireBall();
                 fireCountUpp = 0;
             }
+
+            if (fireBallAnimator.enabled == false)
+            {
+                fireBallAnimator.enabled = true;
+                fireBallRenderer.enabled = true;
+            }
         }
         else
         {
+            if (fireBallAnimator.enabled == true)
+            {
+                fireBallAnimator.enabled = false;
+                fireBallRenderer.enabled = false;
+            }
+
             needToPath = true;
             PathToTarget();
             if (fireCountUpp != 0)
