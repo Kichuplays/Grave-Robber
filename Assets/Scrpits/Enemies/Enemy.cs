@@ -66,8 +66,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, float minDamageVel, Rigidbody2D arb, float knockBack)
-    {
+   public void TakeDamage(int damage, float minDamageVel, Rigidbody2D arb, float knockBack)
+   {
         if(arb.velocity.magnitude > minDamageVel)
         {
             health -= damage;
@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            ScoreManager.Instance.AddScore(scoreValue);
+            //ScoreManager.Instance.AddScore(scoreValue);
             drill.EnemyKilled(rb);
         }
     }
