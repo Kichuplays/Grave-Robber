@@ -1040,11 +1040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+  enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 2042805959}
   spriteRenderer: {fileID: 394817686}
-  swayShovel: {fileID: 0}
-  swayDrill: {fileID: 0}
+  swayShovel: {fileID: 812090643}
+  swayDrill: {fileID: 1063040494}
 --- !u!61 &394817685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1323,11 +1323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+  enemyPrefab: {fileID: 4691522011806246289, guid: 3e525e73ade4f5248880865689df5395, type: 3}
   spawnPoint: {fileID: 1052959546}
   spriteRenderer: {fileID: 535935186}
-  swayShovel: {fileID: 0}
-  swayDrill: {fileID: 0}
+  swayShovel: {fileID: 812090643}
+  swayDrill: {fileID: 1063040494}
 --- !u!61 &535935185
 BoxCollider2D:
   m_ObjectHideFlags: 0
