@@ -22,9 +22,8 @@ public class ShopManager : MonoBehaviour
     public GameObject shopUI;       
     public Transform shopContent;   
     public GameObject itemPrefab;   
-    public PlayerHealth Ph;        
-
-    
+    public PlayerHealth Ph;
+    public SwitchWeapon switchweapon;
     // Awake() körs innan Start(). Den sätter upp Singleton-mönstret
     // och ser till att objektet inte förstörs mellan scenbyten.
     private void Awake()
@@ -116,7 +115,7 @@ public class ShopManager : MonoBehaviour
             upgrade.quantity++;
             upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();
 
-           // ApplyUpgrade(upgrade);
+           ApplyUpgrade(upgrade);
 
         }
     }
@@ -133,6 +132,23 @@ public class ShopManager : MonoBehaviour
         }
      
      }
+     public void BuyDrill(Upgrade upgrade)
+    {
+        if (coins >= upgrade.cost)
+        {
+            coins -= upgrade.cost;
+            upgrade.quantity++;
+            upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();
+
+            DrillSwitchYes();
+
+        }
+    }
+    public void DrillSwitchYes()
+    {
+        switchweapon.enabled = true;
+    }
+
     // Om den är öppen stängs den, och om den är stängd öppnas den
     public void ToggleShop()
     {
@@ -147,8 +163,7 @@ public class ShopManager : MonoBehaviour
     }
 }
 
-// -----------------------------------------------------------
-// En klass som innehåller information om varje uppgradering i shoppen.
+
 
 [System.Serializable]
 public class Upgrade
