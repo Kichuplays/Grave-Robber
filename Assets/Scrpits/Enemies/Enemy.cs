@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        scoreValue = Random.Range(20, 100);
     }
   
     void Update()
