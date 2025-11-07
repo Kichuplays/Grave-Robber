@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
+        animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
     }
   
     void Update()
