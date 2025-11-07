@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GetUmbrella : MonoBehaviour
 {
-    [SerializeField] float followForceOveride = 20, rotationSpeedOveride = 5, massOveride = 1;
+    [SerializeField] float followForceOveride = 150, rotationSpeedOveride = 5, massOveride = 1;
     AudioSource aS;
     bool hasPlayed;
 

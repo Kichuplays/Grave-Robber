@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &215148686
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1319320476931305247, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: drill
+      value: 
+      objectReference: {fileID: 787216704}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217730336154746192, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4605160482080453909, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+      propertyPath: m_Name
+      value: Cooler Zombie2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
 --- !u!1 &257385032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+  enemyPrefab: {fileID: 1835959175}
   spawnPoint: {fileID: 409163860}
   spriteRenderer: {fileID: 763774875}
   swayShovel: {fileID: 378678338}
@@ -2195,7 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658dd8369caeb974e951d1ec377ce84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8724066426715209117, guid: 0af9c7d51caeb9c4f9c3940874923c8b, type: 3}
+  enemyPrefab: {fileID: 1835959175}
   spawnPoint: {fileID: 1324943552}
   spriteRenderer: {fileID: 888967098}
   swayShovel: {fileID: 378678338}
@@ -4021,7 +4082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winnerUI: {fileID: 1101556656}
-  switchweapon: {fileID: 0}
 --- !u!4 &1785462503
 Transform:
   m_ObjectHideFlags: 0
@@ -4056,6 +4116,7 @@ MonoBehaviour:
   shopContent: {fileID: 0}
   itemPrefab: {fileID: 3285951950652651734, guid: 60084c42aef2b814a8b5089dbdc10226, type: 3}
   Ph: {fileID: 1986314313}
+  switchweapon: {fileID: 0}
 --- !u!1 &1800047003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,6 +4215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
+--- !u!1 &1835959175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605160482080453909, guid: 0224e02580c1d7346b1881df737003f5, type: 3}
+  m_PrefabInstance: {fileID: 215148686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1836541278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,4 +5677,5 @@ SceneRoots:
   - {fileID: 2007050664}
   - {fileID: 1563847578734129076}
   - {fileID: 1037445651}
+  - {fileID: 215148686}
   - {fileID: 257385036}
