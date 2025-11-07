@@ -192,7 +192,7 @@ MonoBehaviour:
   isAttacking: 1
   targetDistance: 0.5
   isFacingRight: 0
-  drill: {fileID: 0}
+  drill: {fileID: 8129727853234236411, guid: 74af20c8041ffa44c8d0674f7e4a083f, type: 3}
   scoreValue: 10
   chargeDirection: {x: 0, y: 0}
   climbForce: 2.5
