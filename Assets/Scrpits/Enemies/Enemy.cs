@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
 
     public DrillDamage drill;
     protected Rigidbody2D rb;
+    protected Animator animator;
 
     public int scoreValue;
 
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
   
     void Update()

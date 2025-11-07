@@ -79,10 +79,39 @@ public class ShopManager : MonoBehaviour
                     child.gameObject.GetComponent<Image>().sprite = upgrade.image;
                 }
             }
+            item.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                BuyUpgrade(upgrade);
+            });
+
         }
     }
+    //Köpa upgrade med pengar
+    public void BuyUpgrade(Upgrade upgrade)
+    {
+        if (coins >= upgrade.cost)
+        {
+            coins -= upgrade.cost;
+            upgrade.quantity++;
+            upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();
 
-   
+           // ApplyUpgrade(upgrade);
+
+        }
+    }
+    //Apply the upgrade to the player 
+     public void ApplyUpgrade(Upgrade upgrade) {
+        switch (upgrade.name)
+        {
+            case "Health":
+                Ph.currentHealth += 20;
+                break;
+            default:
+                Debug.Log("No upgrade available");
+                    break;
+        }
+     
+     }
     // Om den är öppen stängs den, och om den är stängd öppnas den
     public void ToggleShop()
     {
