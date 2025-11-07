@@ -5,9 +5,11 @@ public class ShopTrigger : MonoBehaviour
     // gjord av Aiden
     private void OnTriggerEnter2D(Collider2D other)
     {
+        print("hej" + other.gameObject.name);
         //Om ett gameobject(Spelaren) går inne i collidern med taggen "Player" så kommmer shopen att toggla på
         if (other.CompareTag("Player"))
         {
+            Debug.Log("shop open");
             ShopManager.instance.ToggleShop();
         }
 
