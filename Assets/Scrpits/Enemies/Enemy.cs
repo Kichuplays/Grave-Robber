@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            //ScoreManager.Instance.AddScore(scoreValue);
+            ShopManager.instance.AddScore(scoreValue);
             drill.EnemyKilled(rb);
         }
     }
