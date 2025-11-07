@@ -44,17 +44,17 @@ public class SwitchWeapon : MonoBehaviour
 
     void ArmShovel()
     {
-        //armShovel1.SetActive(true);
-        //armShovel2.SetActive(true);
-      //  armDrill1.SetActive(false);
-     //   armDrill2.SetActive(false);
+        armShovel1.SetActive(true);
+         armShovel2.SetActive(true);
+         armDrill1.SetActive(false);
+        armDrill2.SetActive(false);
     }
 
     void ArmDrill()
     {
-       // armShovel1.SetActive(false);
-       // armShovel2.SetActive(false);
-       // armDrill1.SetActive(true);
-       // armDrill2.SetActive(true);
+       armShovel1.SetActive(false);
+       armShovel2.SetActive(false);
+       armDrill1.SetActive(true);
+       armDrill2.SetActive(true);
     }
 }
