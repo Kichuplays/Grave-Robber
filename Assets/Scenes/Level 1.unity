@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &31781572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,7 +5916,7 @@ DistanceJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.000001661283, y: 0.00000000995351}
+  m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 2
   m_MaxDistanceOnly: 1
@@ -8317,7 +8317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &738612624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18040,7 +18040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357286337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21547,17 +21547,17 @@ GameObject:
   - component: {fileID: 1653237806}
   - component: {fileID: 1653237805}
   - component: {fileID: 1653237809}
-  - component: {fileID: 1653237808}
   - component: {fileID: 1653237807}
   - component: {fileID: 1653237810}
   - component: {fileID: 1653237811}
-  m_Layer: 0
+  - component: {fileID: 1653237812}
+  m_Layer: 7
   m_Name: drill
   m_TagString: Drill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1653237805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21654,19 +21654,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1653237808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653237804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d09f1aea6d80c4cae8782274b31eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drilldamage: {fileID: 1653237809}
 --- !u!114 &1653237809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21687,7 +21674,7 @@ MonoBehaviour:
   rampSpeedTick: 2
   attachKey: 101
   detachKey: 114
-  playerRb: {fileID: 1653237807}
+  playerRb: {fileID: 1868700489}
 --- !u!61 &1653237810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21750,6 +21737,26 @@ MonoBehaviour:
   followStrength: 10
   damping: 100
   shovelLength: 1.5
+--- !u!232 &1653237812
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653237804}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 1868700489}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 2.5
+  m_MaxDistanceOnly: 1
 --- !u!1 &1655786974
 GameObject:
   m_ObjectHideFlags: 0
@@ -24429,10 +24436,10 @@ MonoBehaviour:
   guns:
   - {fileID: 520131992}
   - {fileID: 1653237804}
-  armShovel1: {fileID: 0}
-  armShovel2: {fileID: 0}
-  armDrill1: {fileID: 0}
-  armDrill2: {fileID: 0}
+  armShovel1: {fileID: 1221288867}
+  armShovel2: {fileID: 495159093}
+  armDrill1: {fileID: 738612623}
+  armDrill2: {fileID: 31781571}
 --- !u!1 &1869790243
 GameObject:
   m_ObjectHideFlags: 0
@@ -25076,7 +25083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908780931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
