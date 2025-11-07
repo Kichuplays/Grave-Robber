@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SwitchWeapon : MonoBehaviour
+public class SwitchWeapon : MonoBehaviour //made by Atilla
 {
     public GameObject[] guns; //Array för att hålla Vapen GameObject
     private int currentGunIndex = 0; //Trackar aktiva vapnet

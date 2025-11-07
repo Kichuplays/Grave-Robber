@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShovelDamage : MonoBehaviour
+public class ShovelDamage : MonoBehaviour //made by Atilla
 {
     public int damage;
     [SerializeField] float knockBack = 200;

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class DrillDamage : MonoBehaviour
+public class DrillDamage : MonoBehaviour //Made by Atilla
 {
     [Header("Base Settings")]
     public int baseDamage = 1;           // Starting damage per tick
