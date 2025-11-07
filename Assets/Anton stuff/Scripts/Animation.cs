@@ -5,6 +5,8 @@ using System;
 
 public class Animation : MonoBehaviour
 {
+    //Anton K, Movement delen av skripten är gjord av Hannes
+
     public Animator anim;
     public float moveSpeed;
     public float jumpForce;
@@ -32,17 +34,17 @@ public class Animation : MonoBehaviour
             {
                 Jump();
             }
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D)) //Anton K, gör så att animationen spelar när knappen blir nertryckt
             {
                 
                 anim.Play("Run_Animation");
                 
             }
-            else if (Input.GetKeyUp(KeyCode.D))
+            else if (Input.GetKeyUp(KeyCode.D)) //Anton K, gör så att Run animationen slutar spela och går tillbaka till Idle när knappen slutar blir tryckt
             {
                 anim.Play("Idle_Animation");
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A)) 
             {
 
                 anim.Play("RunLeft_Animation");

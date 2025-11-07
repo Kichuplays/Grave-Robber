@@ -78,6 +78,7 @@ public class DrillDamage : MonoBehaviour
         attachedEnemy = null;
         joint.connectedBody = playerRb;
         joint.distance = Vector2.Distance(transform.position, playerRb.position);
+        GetComponent<DistanceJoint2D>().distance = 2.5f;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
