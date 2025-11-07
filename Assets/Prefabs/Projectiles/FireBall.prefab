@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8932461097497428520}
   - component: {fileID: 5032419571506929483}
   - component: {fileID: 3461804009199066508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireBallGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6777739329487027332}
   - component: {fileID: 3570005656891124115}
   - component: {fileID: 6195483020534079580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
